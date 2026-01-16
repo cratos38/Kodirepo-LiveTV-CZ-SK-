@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.livetv.czsk" version="1.3.0" name="LiveTV - CZ/SK" provider-name="cratos38">
+<addon id="plugin.video.livetv.czsk" version="1.3.1" name="LiveTV - CZ/SK" provider-name="cratos38">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.22.0"/>
@@ -38,6 +38,11 @@ Features:
             <icon>resources/icon.png</icon>
         </assets>
         <news>
+v1.3.1 (2026-01-16)
+- NEW: CATCHUP support for CT channels (7 days archive)
+- CT1, CT2, CT24, CT Sport, CT:D/art now support catchup
+- Uses new CT API 2025/2026
+
 v1.3.0 (2026-01-16)
 - NEW: Auto-restart Kodi option after PVR config
 - NEW: Clear instructions if channels don't appear
