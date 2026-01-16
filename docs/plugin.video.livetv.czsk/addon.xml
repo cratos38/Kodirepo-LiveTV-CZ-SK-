@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.livetv.czsk" version="1.1.0" name="LiveTV - CZ/SK" provider-name="cratos38">
+<addon id="plugin.video.livetv.czsk" version="1.2.0" name="LiveTV - CZ/SK" provider-name="cratos38">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.9.0"/>
         <import addon="inputstream.adaptive" version="2.0.0" optional="true"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
@@ -37,12 +38,19 @@ Features:
             <icon>resources/icon.png</icon>
         </assets>
         <news>
+v1.2.0 (2026-01-16)
+- FIXED: BeautifulSoup4 dependency added
+- FIXED: EPG processor now creates epg.xml correctly
+- NEW: Regenerate EPG button in settings
+- NEW: Export M3U button in settings
+- EPG source: iptv-epg.org/files/epg-cz.xml.gz
+- EPG auto-updates every 12 hours
+- ~40 working channels with EPG mapping
+
 v1.1.0 (2026-01-16)
 - NEW: EPG support (Electronic Program Guide)
 - Downloads EPG from iptv-epg.org
-- Auto-updates every 12 hours
 - EPG mapped for 30+ channels
-- v1.0.8 base with ~40 working channels
         </news>
     </extension>
 </addon>
