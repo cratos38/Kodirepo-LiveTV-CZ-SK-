@@ -56,10 +56,11 @@ Features:
                 <icon>resources/icon.png</icon>
             </assets>
             <news>
-v1.0.1 (2026-01-16)
-- Fixed CT streams (using direct iVysilani CDN)
-- Improved channel list with country flags
-- Better group separators (CZ/SK)
+v1.0.3 (2026-01-16)
+- Updated streams from iptv-org
+- Removed non-working channels
+- JOJ channels working
+- CS Film/History/Mystery working
 
 v1.0.0 (2026-01-16)
 - Initial release
