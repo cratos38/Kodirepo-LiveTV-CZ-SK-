@@ -35,7 +35,6 @@ Features:
         <source>https://github.com/cratos38/kodirepo-fix</source>
         <assets>
             <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
         </assets>
         <news>
 v1.0.0 (2026-01-16)
