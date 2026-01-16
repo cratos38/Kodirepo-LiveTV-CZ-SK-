@@ -21,7 +21,7 @@
             </assets>
         </extension>
     </addon>
-    <addon id="plugin.video.livetv.czsk" version="1.2.6" name="LiveTV - CZ/SK" provider-name="cratos38">
+    <addon id="plugin.video.livetv.czsk" version="1.2.7" name="LiveTV - CZ/SK" provider-name="cratos38">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
             <import addon="script.module.requests" version="2.22.0"/>

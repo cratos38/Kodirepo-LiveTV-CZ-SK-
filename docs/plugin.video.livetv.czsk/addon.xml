@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.livetv.czsk" version="1.2.6" name="LiveTV - CZ/SK" provider-name="cratos38">
+<addon id="plugin.video.livetv.czsk" version="1.2.7" name="LiveTV - CZ/SK" provider-name="cratos38">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.22.0"/>
@@ -38,12 +38,12 @@ Features:
             <icon>resources/icon.png</icon>
         </assets>
         <news>
+v1.2.7 (2026-01-16)
+- NEW: Custom icon (retro red TV with antenna!)
+- PVR auto-config with instance support
+
 v1.2.6 (2026-01-16)
-- FIXED: PVR setup now works with instance-based config (like Freeview!)
-- Detects PVR version (20.8+ uses instances)
-- Shows list of instances to select
-- Modifies instance-settings-X.xml directly
-- Sets: M3U path, EPG path, logos, timeshift
+- FIXED: PVR setup works with instance-based config
 
 v1.2.5 (2026-01-16)
 - Instructions only (didn't auto-configure)
