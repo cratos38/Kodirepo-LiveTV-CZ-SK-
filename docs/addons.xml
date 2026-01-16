@@ -21,7 +21,7 @@
             </assets>
         </extension>
     </addon>
-    <addon id="plugin.video.livetv.czsk" version="1.0.3" name="LiveTV - CZ/SK" provider-name="cratos38">
+    <addon id="plugin.video.livetv.czsk" version="1.0.4" name="LiveTV - CZ/SK" provider-name="cratos38">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
             <import addon="script.module.requests" version="2.22.0"/>
@@ -56,14 +56,14 @@ Features:
                 <icon>resources/icon.png</icon>
             </assets>
             <news>
-v1.0.3 (2026-01-16)
-- Updated streams from iptv-org
-- Removed non-working channels
-- JOJ channels working
-- CS Film/History/Mystery working
-
-v1.0.0 (2026-01-16)
-- Initial release
+v1.0.4 (2026-01-16)
+- Copied exact code from Freeview.sk
+- Nova: IP spoofing for geo-bypass
+- CT: Official API
+- RTVS: API + alternative streams
+- TA3: LiveBox.cz parsing
+- Prima: Proxy + CNN API
+- JOJ: Fallback CDN URLs
             </news>
         </extension>
     </addon>
