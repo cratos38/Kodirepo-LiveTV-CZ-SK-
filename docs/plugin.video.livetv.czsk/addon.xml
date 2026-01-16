@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.livetv.czsk" version="1.0.0" name="LiveTV - CZ/SK" provider-name="cratos38">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="inputstream.adaptive" version="2.0.0" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Live TV channels from Czech Republic and Slovakia</summary>
+        <summary lang="cs">Ceska a slovenska televize zive</summary>
+        <summary lang="sk">Ceska a slovenska televizia nazivo</summary>
+        <description lang="en">Watch free live TV channels from Czech Republic and Slovakia. Supports EPG (Electronic Program Guide) and integration with PVR IPTV Simple Client.
+
+Supported channels:
+- CT (Ceska televize): CT1, CT2, CT24, CT Sport, CT:D/art
+- RTVS (Slovak TV): Jednotka, Dvojka, :24, Sport
+- Prima: Prima, Cool, Max, Krimi, Love, Zoom, Star, Show, CNN Prima News
+- JOJ: JOJ, Plus, WAU, Family, Cinema, 24
+- TA3, Ocko, and more...
+
+Features:
+- Live TV streaming
+- EPG support (7 days)
+- Catch-up for supported channels (Phase 3)
+- PVR IPTV Simple Client integration</description>
+        <description lang="cs">Sledujte ceske a slovenske televizni kanaly zdarma.</description>
+        <description lang="sk">Sledujte ceske a slovenske televizne kanaly zadarmo.</description>
+        <license>AGPL-3.0-or-later</license>
+        <website>https://github.com/cratos38/kodirepo-fix</website>
+        <source>https://github.com/cratos38/kodirepo-fix</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+        <news>
+v1.0.0 (2026-01-16)
+- Initial release
+- Live TV streaming for CZ/SK channels
+- Basic EPG support
+- PVR IPTV Simple Client integration
+        </news>
+    </extension>
+</addon>
