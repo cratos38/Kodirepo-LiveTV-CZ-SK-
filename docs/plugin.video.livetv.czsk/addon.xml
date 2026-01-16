@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.livetv.czsk" version="1.0.0" name="LiveTV - CZ/SK" provider-name="cratos38">
+<addon id="plugin.video.livetv.czsk" version="1.0.1" name="LiveTV - CZ/SK" provider-name="cratos38">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.22.0"/>
@@ -37,11 +37,14 @@ Features:
             <icon>resources/icon.png</icon>
         </assets>
         <news>
+v1.0.1 (2026-01-16)
+- Fixed CT streams (using direct iVysilani CDN)
+- Improved channel list with country flags
+- Better group separators (CZ/SK)
+- Added [Archiv] indicator for catch-up channels
+
 v1.0.0 (2026-01-16)
 - Initial release
-- Live TV streaming for CZ/SK channels
-- Basic EPG support
-- PVR IPTV Simple Client integration
         </news>
     </extension>
 </addon>
