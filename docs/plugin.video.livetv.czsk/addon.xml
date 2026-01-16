@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.livetv.czsk" version="1.2.5" name="LiveTV - CZ/SK" provider-name="cratos38">
+<addon id="plugin.video.livetv.czsk" version="1.2.6" name="LiveTV - CZ/SK" provider-name="cratos38">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.22.0"/>
@@ -38,11 +38,15 @@ Features:
             <icon>resources/icon.png</icon>
         </assets>
         <news>
+v1.2.6 (2026-01-16)
+- FIXED: PVR setup now works with instance-based config (like Freeview!)
+- Detects PVR version (20.8+ uses instances)
+- Shows list of instances to select
+- Modifies instance-settings-X.xml directly
+- Sets: M3U path, EPG path, logos, timeshift
+
 v1.2.5 (2026-01-16)
-- CHANGED: PVR setup now shows INSTRUCTIONS instead of auto-config
-- PVR IPTV Simple Client uses instances (Add add-on configuration)
-- Shows step-by-step guide with paths to copy
-- Shows status of M3U and EPG files
+- Instructions only (didn't auto-configure)
 
 v1.2.4 (2026-01-16)
 - Attempted auto-config (doesn't work with instances)
