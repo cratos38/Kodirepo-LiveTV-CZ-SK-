@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-    <addon id="repository.livetv.czsk" name="LiveTV CZ/SK Repository" version="1.0.0" provider-name="cratos38">
+    <addon id="repository.livetv.czsk" name="LiveTV CZ/SK Repository - Nexus 20" version="1.0.0" provider-name="cratos38">
         <extension point="xbmc.addon.repository" name="LiveTV CZ/SK Repository">
             <dir>
-                <info compressed="false">https://cratos38.github.io/kodirepo-livetv-czsk/addons.xml</info>
-                <checksum>https://cratos38.github.io/kodirepo-livetv-czsk/addons.xml.md5</checksum>
-                <datadir zip="true">https://cratos38.github.io/kodirepo-livetv-czsk/</datadir>
+                <info compressed="false">https://cratos38.github.io/Kodirepo-LiveTV-CZ-SK-/addons.xml</info>
+                <checksum>https://cratos38.github.io/Kodirepo-LiveTV-CZ-SK-/addons.xml.md5</checksum>
+                <datadir zip="true">https://cratos38.github.io/Kodirepo-LiveTV-CZ-SK-/</datadir>
             </dir>
         </extension>
         <extension point="xbmc.addon.metadata">
-            <summary lang="en">LiveTV CZ/SK Repository</summary>
-            <summary lang="cs">LiveTV CZ/SK Repozitar</summary>
-            <summary lang="sk">LiveTV CZ/SK Repozitar</summary>
-            <description lang="en">Repository for Czech and Slovak TV addons with EPG and catch-up support.</description>
+            <summary lang="en">LiveTV CZ/SK Repository for Kodi 20 Nexus</summary>
+            <summary lang="cs">LiveTV CZ/SK Repozitar pro Kodi 20 Nexus</summary>
+            <summary lang="sk">LiveTV CZ/SK Repozitar pre Kodi 20 Nexus</summary>
+            <description lang="en">Repository for Czech and Slovak TV addons with EPG and catch-up support. Version for Kodi 20 Nexus.</description>
             <platform>all</platform>
             <license>AGPL-3.0</license>
-            <source>https://github.com/cratos38/kodirepo-livetv-czsk</source>
+            <source>https://github.com/cratos38/Kodirepo-LiveTV-CZ-SK-</source>
             <assets>
                 <icon>icon.png</icon>
             </assets>
         </extension>
     </addon>
-    <addon id="plugin.video.livetv.czsk" version="1.4.21" name="LiveTV - CZ/SK" provider-name="cratos38">
+    <addon id="plugin.video.livetv.czsk" version="1.4.23" name="LiveTV - CZ/SK" provider-name="cratos38">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
             <import addon="script.module.requests" version="2.22.0"/>
@@ -34,41 +34,49 @@
         <extension point="xbmc.service" library="service.py" start="startup"/>
         <extension point="xbmc.addon.metadata">
             <platform>all</platform>
-            <summary lang="en">Live TV channels from Czech Republic and Slovakia</summary>
-            <summary lang="cs">Ceska a slovenska televize zive</summary>
-            <summary lang="sk">Ceska a slovenska televizia nazivo</summary>
+            <summary lang="en">Live TV channels from Czech Republic and Slovakia - Kodi 20 Nexus</summary>
+            <summary lang="cs">Ceska a slovenska televize zive - Kodi 20 Nexus</summary>
+            <summary lang="sk">Ceska a slovenska televizia nazivo - Kodi 20 Nexus</summary>
             <description lang="en">Watch free live TV channels from Czech Republic and Slovakia. Supports EPG (Electronic Program Guide) and integration with PVR IPTV Simple Client.
 
+VERSION FOR KODI 20 NEXUS
+
 Supported channels:
-- CT (Ceska televize): CT1, CT2, CT24, CT Sport, CT:D/art + CATCHUP
-- STVR (Slovak TV): Jednotka, Dvojka, Trojka, :24, Sport + CATCHUP (archive)
-- Prima: Prima, Cool, Max, Krimi, Love, Zoom, Star, Show, CNN Prima News + CATCHUP
+- CT (Ceska televize): CT1, CT2, CT24, CT Sport, CT:D/art + CATCHUP (7 days)
+- STVR (Slovak TV): Jednotka, Dvojka, Trojka, :24, Sport + CATCHUP (~1200 programs)
+- Prima: Prima, Cool, Max, Krimi, Love, Zoom, Star, Show, CNN Prima News + CATCHUP (7 days)
 - JOJ: JOJ, Plus, WAU, Family, Cinema, 24
+- Nova: Nova Cinema (live only, no catchup - requires DRM)
 - TA3, Ocko, and more...
 
 Features:
 - Live TV streaming
 - EPG support (7 days)
-- Catch-up for CT, Prima and STVR (archive programs only)
-- STVR catchup: only own productions, not licensed content
+- Catch-up for CT, Prima and STVR
+- STVR catchup: ~1200 own productions (auto-downloaded index)
 - PVR IPTV Simple Client integration</description>
             <license>AGPL-3.0-or-later</license>
-            <source>https://github.com/cratos38/kodirepo-livetv-czsk</source>
+            <source>https://github.com/cratos38/Kodirepo-LiveTV-CZ-SK-</source>
             <assets>
                 <icon>resources/icon.png</icon>
             </assets>
             <news>
+v1.4.23 (2026-01-17) - FINAL RELEASE FOR NEXUS
+- FIX: EPG processor now auto-downloads STVR archive index
+- FIX: Catchup working correctly for all supported channels
+- STVR archive: ~1200 programs with automatic search by title
+- Tested and verified: CT, Prima, STVR catchup all working
+
+v1.4.22 (2026-01-17)
+- FIX: EPG auto-downloads STVR archive index
+- FIX: Improved archive search logging
+
 v1.4.21 (2026-01-17)
 - NEW: STVR provider (replaces old RTVS)
-- NEW: STVR CATCHUP for archive programs (~1200 programs)
+- NEW: STVR CATCHUP support for archive programs
 - STVR catchup searches by PROGRAM NAME in archive
-- Only STVR own productions have catchup (green dot in EPG)
-- Licensed content (movies, foreign series) NOT available
-- EPG marks STVR programs with catchup-id only if in archive
-
-v1.4.18 (2026-01-17)
-- CATCHUP by PROGRAMME NAME (no more timestamp issues!)
-- EPG includes catchup-id with programme title
+- Only programs available in STVR archive show catchup (green dot)
+- Archive index: ~1200 programs (STVR own productions)
             </news>
         </extension>
     </addon>

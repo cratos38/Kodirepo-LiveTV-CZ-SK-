@@ -1,86 +1,105 @@
-# Kodirepo-LiveTV - CZ/SK
+# LiveTV CZ/SK - Kodi 20 Nexus
 
-Kodi addon repository for Czech and Slovak TV channels with EPG support.
+🔵 **VERSIÓN PARA KODI 20 NEXUS**
 
-## Supported Kodi Versions
-- **Kodi 20 Nexus** (primary)
-- **Kodi 21 Omega** (compatible)
+⚠️ Para Kodi 21 Omega, se creará un repositorio separado próximamente.
 
-## Included Addons
+## Estado
 
-### plugin.video.livetv.czsk
-Main addon for watching Czech and Slovak TV channels.
+✅ **VERSIÓN 1.4.23** - Funcional y probada
 
-**Features:**
-- Live TV streaming for CZ/SK channels
-- EPG (Electronic Program Guide) support - 7 days
-- Catch-up support for selected channels (CT, RTVS)
-- Integration with PVR IPTV Simple Client
-- Standalone mode (direct from addon)
+## Canales Soportados
 
-**Supported Channels:**
+### República Checa 🇨🇿
+| Canal | Live | Catchup |
+|-------|------|---------|
+| CT1, CT2, CT24, CT Sport, CT:D/art | ✅ | ✅ 7 días |
+| Prima, Cool, Max, Krimi, Love, Zoom, Star, Show, CNN | ✅ | ✅ 7 días |
+| Nova Cinema | ✅ | ❌ DRM |
+| Ocko, Ocko Star, Ocko Express | ✅ | ❌ |
 
-| Country | Provider | Channels |
-|---------|----------|----------|
-| CZ | Ceska Televize | CT1, CT2, CT24, CT Sport, CT:D/art |
-| CZ | Prima | Prima, Cool, Max, Krimi, Love, Zoom, Star, Show, CNN Prima |
-| CZ | Nova | Nova, Cinema, Sport 1, Sport 2 |
-| CZ | Barrandov | TV Barrandov, Kino Barrandov |
-| CZ | Music | Ocko, Ocko Expres, Ocko Star, Retro Music |
-| SK | RTVS | Jednotka, Dvojka, :24, RTVS Sport |
-| SK | JOJ | JOJ, Plus, WAU, Family, 24, Cinema, Sport |
-| SK | JOJ | CS Film, CS History, CS Mystery |
-| SK | News | TA3 |
+### Eslovaquia 🇸🇰
+| Canal | Live | Catchup |
+|-------|------|---------|
+| STVR Jednotka, Dvojka, Trojka, :24, Sport | ✅ | ✅ ~1200 programas |
+| JOJ, Plus, WAU, Family, Cinema, 24 | ✅ | ❌ |
+| TA3 | ✅ | ❌ |
+| Markiza (requiere cuenta) | ⚠️ | ❌ |
 
-**Catch-up Support:**
-- Ceska Televize (CT1, CT2, CT24, CT Sport, CT:D/art) - Full 7-day catch-up
-- RTVS (Jednotka, Dvojka, :24, Sport) - Limited catch-up (own productions only)
+## Instalación
 
-## Installation
+### Método 1: Instalar desde ZIP (Recomendado)
 
-### Method 1: Add Repository Source
-1. Open Kodi
-2. Go to **Settings** > **File Manager** > **Add Source**
-3. Enter URL: `https://cratos38.github.io/kodirepo-livetv-czsk/`
-4. Name it: `LiveTV CZ/SK`
-5. Go to **Add-ons** > **Install from zip file** > **LiveTV CZ/SK**
-6. Select `repository.livetv.czsk-x.x.x.zip`
-7. Install addons from the repository
+1. Descarga: `plugin.video.livetv.czsk-1.4.23.zip` desde la carpeta `docs/plugin.video.livetv.czsk/`
+2. Kodi → Add-ons → Instalar desde archivo ZIP
+3. Selecciona el archivo descargado
+4. Sigue las instrucciones en pantalla
 
-### Method 2: Direct ZIP Install
-Download the addon ZIP and install via **Add-ons** > **Install from zip file**
+### Método 2: Añadir Repositorio
 
-## Repository Structure
+1. Kodi → Configuración → Administrador de archivos
+2. Añadir fuente: `https://cratos38.github.io/Kodirepo-LiveTV-CZ-SK-/`
+3. Nombre: `LiveTV CZ/SK Nexus`
+4. Kodi → Add-ons → Instalar desde ZIP → `repository.livetv.czsk-1.0.0.zip`
+5. Instalar addon desde el repositorio
+
+## Uso
+
+1. Abre el addon LiveTV CZ/SK
+2. **Regenerar EPG** - Descarga la guía de programas
+3. **Exportar M3U** - Genera la playlist
+4. **Configurar PVR** - Configura PVR IPTV Simple Client
+5. Reinicia Kodi
+6. Ve a TV → Ver canales
+
+## Catchup (Ver programas pasados)
+
+Para usar catchup:
+1. Configura PVR IPTV Simple Client → pestaña Catchup
+2. Activa "Activar catchup" → Sí
+3. Activa "Sobreescribir catchup" → Sí
+4. Modo Catchup: Separado
+5. Tipo: VOD
+6. Fuente: M3U (si lo soporta)
+
+## Estructura del Repositorio
+
 ```
-kodirepo-livetv-czsk/
+Kodirepo-LiveTV-CZ-SK-/
 ├── docs/
 │   ├── addons.xml
 │   ├── addons.xml.md5
 │   ├── index.html
 │   ├── plugin.video.livetv.czsk/
 │   │   ├── addon.xml
-│   │   └── plugin.video.livetv.czsk-x.x.x.zip
+│   │   ├── icon.png
+│   │   └── plugin.video.livetv.czsk-1.4.23.zip (+ versiones anteriores)
 │   └── repository.livetv.czsk/
-│       ├── addon.xml
-│       └── repository.livetv.czsk-x.x.x.zip
+│       └── repository.livetv.czsk-1.0.0.zip
 └── README.md
 ```
 
-## Development
+## Historial de Versiones
 
-### Building the repository
-```bash
-python3 create_repository.py
-```
+| Versión | Fecha | Cambios |
+|---------|-------|---------|
+| 1.4.23 | 2026-01-17 | FIX: EPG auto-descarga índice STVR, catchup funcional |
+| 1.4.22 | 2026-01-17 | FIX: Mejoras en logs de archivo |
+| 1.4.21 | 2026-01-17 | NEW: STVR provider con catchup |
+| 1.3.2 | 2026-01-16 | NEW: Prima catchup |
+| 1.3.1 | 2026-01-16 | NEW: CT catchup |
 
-## Credits
-- **Author**: cratos38
-- **Based on**: freeview.sk by cache-sk
-- **Data sources**: iptv-org, iptv-epg.org
+## Créditos
 
-## License
-AGPL-3.0
+- **Autor**: cratos38
+- **Basado en**: freeview.sk by cache-sk
+- **Fuentes de datos**: iptv-org, iptv-epg.org
+- **Licencia**: AGPL-3.0
 
-## Links
-- [GitHub Repository](https://github.com/cratos38/kodirepo-livetv-czsk)
-- [Issues](https://github.com/cratos38/kodirepo-livetv-czsk/issues)
+## Enlaces
+
+- 🏠 [Repositorio GitHub](https://github.com/cratos38/Kodirepo-LiveTV-CZ-SK-)
+- 🐛 [Reportar problemas](https://github.com/cratos38/Kodirepo-LiveTV-CZ-SK-/issues)
+
+---
+**Compatible con**: Kodi 20 Nexus
