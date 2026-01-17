@@ -21,7 +21,7 @@
             </assets>
         </extension>
     </addon>
-    <addon id="plugin.video.livetv.czsk" version="1.4.20" name="LiveTV - CZ/SK" provider-name="cratos38">
+    <addon id="plugin.video.livetv.czsk" version="1.4.21" name="LiveTV - CZ/SK" provider-name="cratos38">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
             <import addon="script.module.requests" version="2.22.0"/>
@@ -40,16 +40,17 @@
             <description lang="en">Watch free live TV channels from Czech Republic and Slovakia. Supports EPG (Electronic Program Guide) and integration with PVR IPTV Simple Client.
 
 Supported channels:
-- CT (Ceska televize): CT1, CT2, CT24, CT Sport, CT:D/art
-- RTVS (Slovak TV): Jednotka, Dvojka, :24, Sport
-- Prima: Prima, Cool, Max, Krimi, Love, Zoom, Star, Show, CNN Prima News
+- CT (Ceska televize): CT1, CT2, CT24, CT Sport, CT:D/art + CATCHUP
+- STVR (Slovak TV): Jednotka, Dvojka, Trojka, :24, Sport + CATCHUP (archive)
+- Prima: Prima, Cool, Max, Krimi, Love, Zoom, Star, Show, CNN Prima News + CATCHUP
 - JOJ: JOJ, Plus, WAU, Family, Cinema, 24
 - TA3, Ocko, and more...
 
 Features:
 - Live TV streaming
 - EPG support (7 days)
-- Catch-up for CT and Prima channels (SEARCH BY NAME!)
+- Catch-up for CT, Prima and STVR (archive programs only)
+- STVR catchup: only own productions, not licensed content
 - PVR IPTV Simple Client integration</description>
             <license>AGPL-3.0-or-later</license>
             <source>https://github.com/cratos38/kodirepo-livetv-czsk</source>
@@ -57,17 +58,17 @@ Features:
                 <icon>resources/icon.png</icon>
             </assets>
             <news>
-v1.4.20 (2026-01-17)
-- Visual notifications showing search and playback
-- Shows "Buscando: [title]" when starting catchup
-- Shows "Reproduciendo: [title]" when stream starts
-- Helps debug EPG/catchup sync issues
+v1.4.21 (2026-01-17)
+- NEW: STVR provider (replaces old RTVS)
+- NEW: STVR CATCHUP for archive programs (~1200 programs)
+- STVR catchup searches by PROGRAM NAME in archive
+- Only STVR own productions have catchup (green dot in EPG)
+- Licensed content (movies, foreign series) NOT available
+- EPG marks STVR programs with catchup-id only if in archive
 
 v1.4.18 (2026-01-17)
-- NEW: CATCHUP by PROGRAMME NAME (no more timestamp issues!)
+- CATCHUP by PROGRAMME NAME (no more timestamp issues!)
 - EPG includes catchup-id with programme title
-- M3U uses {catchup-id} to pass title directly
-- CT catchup searches by name first, timestamp fallback
             </news>
         </extension>
     </addon>
