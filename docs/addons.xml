@@ -21,7 +21,7 @@
             </assets>
         </extension>
     </addon>
-    <addon id="plugin.video.livetv.czsk" version="1.4.19" name="LiveTV - CZ/SK" provider-name="cratos38">
+    <addon id="plugin.video.livetv.czsk" version="1.4.20" name="LiveTV - CZ/SK" provider-name="cratos38">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
             <import addon="script.module.requests" version="2.22.0"/>
@@ -57,12 +57,17 @@ Features:
                 <icon>resources/icon.png</icon>
             </assets>
             <news>
+v1.4.20 (2026-01-17)
+- Visual notifications showing search and playback
+- Shows "Buscando: [title]" when starting catchup
+- Shows "Reproduciendo: [title]" when stream starts
+- Helps debug EPG/catchup sync issues
+
 v1.4.18 (2026-01-17)
 - NEW: CATCHUP by PROGRAMME NAME (no more timestamp issues!)
 - EPG includes catchup-id with programme title
 - M3U uses {catchup-id} to pass title directly
 - CT catchup searches by name first, timestamp fallback
-- Eliminates all timezone/timestamp problems forever
             </news>
         </extension>
     </addon>
