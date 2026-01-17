@@ -21,7 +21,7 @@
             </assets>
         </extension>
     </addon>
-    <addon id="plugin.video.livetv.czsk" version="1.4.0" name="LiveTV - CZ/SK" provider-name="cratos38">
+    <addon id="plugin.video.livetv.czsk" version="1.4.18" name="LiveTV - CZ/SK" provider-name="cratos38">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
             <import addon="script.module.requests" version="2.22.0"/>
@@ -49,7 +49,7 @@ Supported channels:
 Features:
 - Live TV streaming
 - EPG support (7 days)
-- Catch-up for CT and Prima channels
+- Catch-up for CT and Prima channels (SEARCH BY NAME!)
 - PVR IPTV Simple Client integration</description>
             <license>AGPL-3.0-or-later</license>
             <source>https://github.com/cratos38/kodirepo-livetv-czsk</source>
@@ -57,10 +57,12 @@ Features:
                 <icon>resources/icon.png</icon>
             </assets>
             <news>
-v1.4.0 (2026-01-17)
-- FIXED: Prima catchup "NoneType" error definitively
-- Changed to use datetime module directly (dt_module.datetime)
-- Prevents name collision in Kodi multi-threaded environment
+v1.4.18 (2026-01-17)
+- NEW: CATCHUP by PROGRAMME NAME (no more timestamp issues!)
+- EPG includes catchup-id with programme title
+- M3U uses {catchup-id} to pass title directly
+- CT catchup searches by name first, timestamp fallback
+- Eliminates all timezone/timestamp problems forever
             </news>
         </extension>
     </addon>
